@@ -1,0 +1,101 @@
+#main{
+    width:60%;
+    margin-left: 300px;
+    height:450px;
+    margin-top:-400px;
+}
+#upper{
+    display:grid;
+    grid-template-columns:repeat(8,1fr);
+    gap: 2px;
+    grid-template-rows: auto;
+    width:60%;
+    margin:auto;
+    color: whitesmoke;
+
+}
+#upper:hover{
+cursor: pointer;
+}
+#lower:hover{
+    cursor: pointer;
+}
+#lower{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap: 5px;
+    grid-template-rows: auto;
+    width:60%;
+    margin:auto;
+    color: whitesmoke;
+    display:flex;
+    justify-content:space-around;
+    margin-left: -30px;
+    margin-top:15px;
+
+}
+#navbar{
+    background-color: black;
+    height: 80px;
+}
+#signup{
+    font-style:bold;
+  margin-left:1300px;
+  font-size: 30px;
+  color: white;
+  border-radius: 25px;
+  background-color: red;
+  margin-top: 180px;
+}
+#join{
+  margin-left:1300px;
+  width:150px;
+  height:150px;
+}
+#wel{
+    margin-left: 1300px;
+}
+#strike{
+    text-decoration: line-through;
+}
+h2{
+    font-size: smaller;
+}
+#productchadiv
+{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: auto;
+    margin-top:80px;
+    background-color:whitesmoke;
+    
+}
+#productchadiv:hover{
+    cursor: pointer;
+}
+#categories{
+    display:grid;
+    margin-bottom: 600px;
+    gap:2px
+}
+#buttony{
+    width: 120px;
+    height: 40px;
+    background-color: red;
+    border-radius: 25px;
+    
+}
+#flash{
+text-align: center;
+color:blue;
+}
+#carsy{
+    margin-left:1300px;
+    width:150px;
+    height:50px;
+    background-color: red;
+}
+#logo{
+    margin-bottom:50px;
+    margin-top: -200px;
+}

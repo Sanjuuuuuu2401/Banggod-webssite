@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #carty{
+            text-align: center;
+            font-style: arial;
+            color: chocolate;
+        }
+        #str{
+            text-decoration: line-through;
+        }
+        #buttonys{
+    width: 120px;
+    height: 40px;
+    background-color:blue;
+    border-radius: 25px;
+    color:white;
+    
+   }
+        #cartdiv{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: auto;
+            background-color: azure;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id = "carty">CART </h1>
+    <div id = "cartdiv"></div>
+    
+</body>
+</html>
+<script>
+addData= JSON.parse(localStorage.getItem("addArr"))
+    addData.forEach(function(elem) {
+        
+    var box = document.createElement("div")
+
+    var iamage = document.createElement("img")
+    iamage.setAttribute("src",elem.image_url)
+
+    var productName = document.createElement("h4")
+    productName.innerText=elem.name
+    var productPrice = document.createElement("h3")
+    productPrice.innerText=elem.price
+    var strike = document.createElement("h3")
+    strike.setAttribute("id","str")
+    strike.innerText=elem.strikedoffprice
+    var removefromcart = document.createElement("button")
+    removefromcart.innerText="Remove"
+     removefromcart.setAttribute("id","buttonys")
+     removefromcart.addEventListener("click", function() {
+      removekar(elem)
+
+    })
+   
+    box.append(iamage,productName,productPrice,strike,removefromcart)
+    document.querySelector("#cartdiv").append(box)
+    
+
+        
+    })
+    function removekar(elem){
+        addData.splice(1,1)
+        localStorage.setItem("addArr",JSON.stringify(addData))
+        window.location.reload()
+
+        
+    }
+</script>
